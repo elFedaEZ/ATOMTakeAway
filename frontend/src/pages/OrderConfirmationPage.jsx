@@ -93,7 +93,10 @@ export default function OrderConfirmationPage() {
 
           <ul className="divide-y divide-zinc-100 py-2">
             {order.items.map((it, idx) => (
-              <li key={idx} className="flex items-center justify-between py-3 text-sm">
+              <li
+                key={`${it.menu_item_id}-${idx}`}
+                className="flex items-center justify-between py-3 text-sm"
+              >
                 <div>
                   <p className="font-medium text-zinc-900">{it.name}</p>
                   <p className="text-xs text-zinc-500">
