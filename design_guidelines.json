@@ -1,0 +1,107 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast) modified for Minimal E-commerce",
+  "domain": "Take-Away Food App (ATOM TakeAway)",
+  "language": "es",
+  "colors": {
+    "background": "#FAFAFA",
+    "surface": "#FFFFFF",
+    "primary": "#06B6D4",
+    "primary_hover": "#0891B2",
+    "secondary": "#10B981",
+    "secondary_hover": "#059669",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "border": "#E4E4E7",
+    "accent_cyan": "#00B4D8",
+    "accent_green": "#2A9D8F",
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "rules": {
+      "h1": "text-5xl sm:text-6xl font-bold tracking-tighter text-text_primary",
+      "h2": "text-3xl sm:text-4xl font-semibold tracking-tight text-text_primary",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight text-text_primary",
+      "body": "text-base leading-relaxed text-text_secondary",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-primary"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Use p-8 or p-12 for container padding to let the food imagery breathe.",
+    "grid": "Bento Grid Protocol. Use grid-cols-1 md:grid-cols-2 lg:grid-cols-4 for menu items.",
+    "image_constraints": "max-h-[60vh] on mobile for hero images. Product card images should have aspect-square.",
+    "alignment": "Optical alignment over geometrical. Left-align dense content. Centered headers only if supporting visual hierarchy."
+  },
+  "components": {
+    "cards": "Cardless or 1px subtle border (#E4E4E7). Max 8px border-radius (rounded-lg). Hover effect: -translate-y-1 with subtle shadow-lg.",
+    "buttons": "Primary actions (Cart, Checkout) use cyan or green background with white text. Rounded-full or rounded-lg for a modern look. MUST include hover:bg-opacity-90 or darker shade.",
+    "navigation": "Sticky glassmorphism header (backdrop-blur-xl bg-white/80) with 1px bottom border. Must include Logo (ATOM), Links, and Cart icon with badge.",
+    "cart_drawer": "Use Shadcn Sheet component. Right-side drawer. Clear hierarchy: Items -> Total -> Checkout Button.",
+    "checkout_form": "Shadcn Form/Input components. Simple fields: Nombre, Teléfono, Hora de retiro, Notas. Text below button: 'Pago en efectivo al retirar' (Cash on pickup only).",
+    "admin_panel": "Dense grid layout (Control Room Grid). Use Shadcn Table for orders. Status pills: Pendiente (Gray), Preparando (Yellow), Listo (Green), Entregado (Cyan)."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Product cards MUST lift slightly on hover. Buttons must have scale-95 on active/click.",
+    "page_transitions": "Framer motion for page or tab transitions (opacity and slight y-axis slide).",
+    "cart_interaction": "Cart icon must have a subtle bounce animation when an item is added."
+  },
+  "media": {
+    "rules": "ONLY use the provided images. NEVER use placeholders. Map exactly to these URLs.",
+    "image_urls": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1630852026727-cedb31e3f956?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Minimalist gourmet burger on a white plate. Use as the main hero image on the landing page."
+      },
+      "category_burgers": {
+        "url": "https://images.pexels.com/photos/4315148/pexels-photo-4315148.jpeg",
+        "description": "Mouthwatering close-up of gourmet burgers on a wooden board. Use for the Burgers category or popular product."
+      },
+      "product_burger_1": {
+        "url": "https://images.unsplash.com/photo-1700513970028-d8a630d21c6e?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Plate of food with a burger, fries, and dips. Perfect for combo meals."
+      },
+      "product_burger_2": {
+        "url": "https://images.pexels.com/photos/29368033/pexels-photo-29368033.jpeg",
+        "description": "Gourmet beef burger close-up."
+      },
+      "category_fries": {
+        "url": "https://images.pexels.com/photos/32421783/pexels-photo-32421783.jpeg",
+        "description": "Crispy crinkle-cut French fries. Use for Fries/Sides category."
+      },
+      "product_fries_1": {
+        "url": "https://images.pexels.com/photos/31771051/pexels-photo-31771051.jpeg",
+        "description": "Crispy golden French fries plate."
+      },
+      "category_coffee": {
+        "url": "https://images.unsplash.com/photo-1670932599207-764a68cf1574?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Cappuccino on a saucer on a wooden table. Use for Coffee category."
+      },
+      "product_coffee_1": {
+        "url": "https://images.pexels.com/photos/31011917/pexels-photo-31011917.jpeg",
+        "description": "Latte art in a black cup."
+      },
+      "category_bakery": {
+        "url": "https://images.unsplash.com/photo-1771415675633-1f17a16c7f6a?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Slice of cake. Use for Bakery/Pastries category."
+      },
+      "about_signage": {
+        "url": "https://images.unsplash.com/photo-1542200684142-9e7bf8ce104b?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Bakery signage. Use for the footer or 'About Us' section."
+      }
+    }
+  },
+  "instructions_to_main_agent": {
+    "ui_text": "All UI text MUST be in Spanish. E.g., 'Añadir al carrito', 'Finalizar compra', 'Menú', 'Panel de Administración'.",
+    "theme_implementation": "Do not implement dark mode. Keep it light, clean, and minimal to showcase the high-quality food photography.",
+    "testing": "Add data-testid attributes to all interactive elements (e.g., data-testid='add-to-cart-btn', data-testid='checkout-submit').",
+    "icons": "Use 'lucide-react' for all icons (ShoppingCart, Menu, Plus, Minus, Trash2).",
+    "payment_flow": "Do NOT integrate Stripe or actual payment gateways. The checkout form must simply collect details and clearly state 'Pago en efectivo al retirar'."
+  }
+}
